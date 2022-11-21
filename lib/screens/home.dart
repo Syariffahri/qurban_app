@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:speed_code01/data/kurban_list.dart';
+import 'package:speed_code01/global.dart';
 import 'package:speed_code01/widgets/category_widget.dart';
 import 'package:speed_code01/widgets/container_row_widget.dart';
 import 'package:speed_code01/widgets/list_kurban_widget.dart';
@@ -15,32 +16,31 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool _hide = true;
+
   @override
   Widget build(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.width;
-    var screenHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
         SizedBox(
-          height: screenHeight * 0.32,
+          height: screenHeight * 0.3,
           child: Stack(
             children: [
               Container(
                 width: screenWidth,
-                height: screenHeight * 0.27,
-                padding: const EdgeInsets.all(20),
-                decoration: const BoxDecoration(
+                height: screenHeight * 0.25,
+                padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xff0F95D4),
-                      Color(0xff229AD3),
-                      Color(0xff4765F4),
+                      CustomColors.primaryColorLight,
+                      CustomColors.primaryColor,
+                      CustomColors.primaryColorDark,
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     tileMode: TileMode.clamp,
                   ),
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30),
                   ),
@@ -50,11 +50,11 @@ class _HomeState extends State<Home> {
                   children: [
                     Row(
                       children: [
-                        const CircleAvatar(
+                        CircleAvatar(
                           backgroundImage:
-                              AssetImage('assets/images/profile.png'),
+                              AssetImage('${assetsImages}profile.png'),
                         ),
-                        const SizedBox(width: 10),
+                        CustomSpace.spaceWidth,
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -182,31 +182,34 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        const SizedBox(height: 20),
+        // const SizedBox(height: 20),
+        CustomSpace.spaceHeight,
+        CustomSpace.spaceHeight,
         // category kurban
         Wrap(
           spacing: 8.0,
           runSpacing: 10.0,
-          children: const [
+          children: [
             CategoryWidget(
               category: "Paket Kurban",
-              icon: "assets/icons/icon_domba.png",
-              color: Color(0xffD0E1E8),
+              // icon: "assets/icons/icon_domba.png",
+              icon: "${assetsIcons}icon_domba.png",
+              color: const Color(0xffD0E1E8),
             ),
             CategoryWidget(
               category: "Patungan Sapi",
-              icon: "assets/icons/icon_sapi.png",
-              color: Color(0xff95E294),
+              icon: "${assetsIcons}icon_sapi.png",
+              color: const Color(0xff95E294),
             ),
             CategoryWidget(
               category: "Tabungan Kurban",
-              icon: "assets/icons/icon_coin.png",
-              color: Color(0xff94D8E5),
+              icon: "${assetsIcons}icon_coin.png",
+              color: const Color(0xff94D8E5),
             ),
             CategoryWidget(
               category: "Celengan Kurban",
-              icon: "assets/icons/icon_jar.png",
-              color: Color(0xffD9B1EE),
+              icon: "${assetsIcons}icon_jar.png",
+              color: const Color(0xffD9B1EE),
             ),
           ],
         ),
@@ -216,13 +219,13 @@ class _HomeState extends State<Home> {
           child: ListView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
-            children: const [
+            children: [
               ContainerRowWidget(
-                image: "assets/icons/card_2.png",
+                image: "${assetsIcons}card_2.png",
                 title: "Persiapan Kurban di awal waktu",
               ),
               ContainerRowWidget(
-                image: "assets/icons/card_1.png",
+                image: "${assetsIcons}card_1.png",
                 title: "Beli Kurban Dengan Mudah",
               ),
             ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
+import '../../global.dart';
+
 class DetailScreen extends StatefulWidget {
   final String image;
   final String category;
@@ -35,8 +37,6 @@ class _DetailScreenState extends State<DetailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.width;
-    var screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: ListView(
         padding: const EdgeInsets.all(20),
@@ -69,9 +69,9 @@ class _DetailScreenState extends State<DetailScreen> {
                             child: CircleAvatar(
                               maxRadius: 20,
                               backgroundColor: Colors.white.withOpacity(0.5),
-                              child: const Icon(
+                              child: Icon(
                                 IconlyLight.arrow_left,
-                                color: Color(0xff2D2D2D),
+                                color: CustomColors.black,
                               ),
                             ),
                           ),
@@ -83,9 +83,9 @@ class _DetailScreenState extends State<DetailScreen> {
                               backgroundColor: Colors.white.withOpacity(0.5),
                               child: Stack(
                                 children: [
-                                  const Icon(
+                                  Icon(
                                     IconlyLight.buy,
-                                    color: Color(0xff2D2D2D),
+                                    color: CustomColors.black,
                                   ),
                                   Positioned(
                                     top: 0,
@@ -153,10 +153,10 @@ class _DetailScreenState extends State<DetailScreen> {
           Text(
             "Bobot ${(widget.weight)}",
             style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                  color: const Color(0xff2D2D2D),
+                  color: CustomColors.black,
                 ),
           ),
-          const SizedBox(height: 10),
+          CustomSpace.spaceHeight,
           Text(
             widget.desc,
             textAlign: TextAlign.justify,
@@ -201,7 +201,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     "Harga/ekor",
                     style: Theme.of(context).textTheme.subtitle1,
                   ),
-                  const SizedBox(height: 5),
+                  CustomSpace.spaceHeight,
                   Text(
                     widget.price,
                     style: Theme.of(context).textTheme.headline1,
@@ -210,18 +210,18 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
               TextButton(
                 onPressed: () {},
-                child: Text(
-                  "Beli Sekarang",
-                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                        color: Colors.white,
-                      ),
-                ),
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.all(20),
                   backgroundColor: Theme.of(context).primaryColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
+                ),
+                child: Text(
+                  "Beli Sekarang",
+                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                        color: Colors.white,
+                      ),
                 ),
               ),
             ],
@@ -255,9 +255,9 @@ Widget _biaya(context, String biaya) {
         ),
         Text(
           "Biaya ${(biaya)}",
-          style: Theme.of(context).textTheme.bodyText2!.copyWith(
+          style: Theme.of(context).textTheme.subtitle1!.copyWith(
                 fontSize: 12,
-                fontWeight: FontWeight.w500,
+                color: CustomColors.black,
               ),
         ),
       ],

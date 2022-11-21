@@ -1,6 +1,8 @@
+import 'package:speed_code01/global.dart';
+
 List kurbanList = [
   {
-    "image": "assets/images/domba.png",
+    "image": "${assetsImages}domba.png",
     "title": "Domba Premium",
     "category": "Domba",
     "price": "Rp 2.600.000",
@@ -9,7 +11,7 @@ List kurbanList = [
         "Kurban akan di salurkan kepada anak yatim dan dhuafa, janda dhuafa, korban pencana, dan yang berhak menerima di seluruh Indonesia. untuk persiapan qurban di awal waktu"
   },
   {
-    "image": "assets/images/sapi.png",
+    "image": "${assetsImages}sapi.png",
     "title": "Sapi Premium",
     "category": "Sapi",
     "price": "Rp 26.000.000",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
+import 'package:speed_code01/global.dart';
 import 'package:speed_code01/screens/history.dart';
 import 'package:speed_code01/screens/home.dart';
 import 'package:speed_code01/screens/notification.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   /* 
-  Instagram: @fahri.code
+  Instagram: @syariffahrii
   Youtube: @codingwithfahrii
   Github: @syariffahri
   */
@@ -23,23 +24,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: const Color(0xff229AD3),
+        primaryColor: CustomColors.primaryColor,
         primarySwatch: Colors.blue,
         textTheme: TextTheme(
           bodyText2: GoogleFonts.montserrat(
             fontWeight: FontWeight.w600,
             fontSize: 14,
-            color: const Color(0xff2D2D2D),
+            color: CustomColors.black,
           ),
           headline1: GoogleFonts.montserrat(
             fontWeight: FontWeight.w700,
             fontSize: 24,
-            color: const Color(0xff2D2D2D),
+            color: CustomColors.black,
           ),
           subtitle1: GoogleFonts.montserrat(
             fontWeight: FontWeight.w500,
             fontSize: 13,
-            color: const Color(0xff2D2D2D).withOpacity(0.6),
+            color: CustomColors.black.withOpacity(0.6),
           ),
           subtitle2: GoogleFonts.montserrat(
             fontSize: 12,
@@ -86,8 +87,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
           showSelectedLabels: false,
           elevation: 0,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: const Color(0xff229AD3),
-          unselectedItemColor: const Color(0xff2D2D2D).withOpacity(0.6),
+          selectedItemColor: CustomColors.primaryColor,
+          unselectedItemColor: CustomColors.black.withOpacity(0.6),
           items: [
             BottomNavigationBarItem(
               icon: Icon(

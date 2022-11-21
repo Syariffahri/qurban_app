@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speed_code01/global.dart';
 import 'package:speed_code01/screens/detail/detail.dart';
 
 class ListKurbanWidget extends StatelessWidget {
@@ -19,10 +20,8 @@ class ListKurbanWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var sw = MediaQuery.of(context).size.width;
-    var sh = MediaQuery.of(context).size.height;
     return Container(
-      width: sw * 0.5,
+      width: screenWidth * 0.5,
       margin: const EdgeInsets.only(right: 20),
       child: InkWell(
         onTap: () {
@@ -60,8 +59,8 @@ class ListKurbanWidget extends StatelessWidget {
               Hero(
                 tag: category,
                 child: Container(
-                  width: sw,
-                  constraints: BoxConstraints(minHeight: sh * 0.17),
+                  width: screenWidth,
+                  constraints: BoxConstraints(minHeight: screenHeight * 0.17),
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(image),

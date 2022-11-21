@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speed_code01/global.dart';
 
 class ContainerRowWidget extends StatelessWidget {
   final String image;
@@ -8,9 +9,8 @@ class ContainerRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var sw = MediaQuery.of(context).size.width;
     return Container(
-      width: sw * 0.67,
+      width: screenWidth * 0.67,
       padding: const EdgeInsets.symmetric(horizontal: 5),
       margin: const EdgeInsets.only(right: 20),
       decoration: BoxDecoration(
@@ -21,10 +21,10 @@ class ContainerRowWidget extends StatelessWidget {
         children: [
           Image.asset(
             image,
-            width: sw * 0.2,
+            width: screenWidth * 0.2,
             fit: BoxFit.cover,
           ),
-          const SizedBox(width: 10),
+          CustomSpace.spaceWidth,
           Flexible(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 15),
