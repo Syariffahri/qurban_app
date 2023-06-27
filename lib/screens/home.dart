@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
                               "Assalamualaikum",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle2!
+                                  .titleSmall!
                                   .copyWith(
                                     color: Colors.white,
                                   ),
@@ -151,7 +151,7 @@ class _HomeState extends State<Home> {
                             children: [
                               Text(
                                 "Tabungan Kurban",
-                                style: Theme.of(context).textTheme.subtitle2,
+                                style: Theme.of(context).textTheme.titleSmall,
                               ),
                               const SizedBox(height: 5),
                               Text(
@@ -239,7 +239,7 @@ class _HomeState extends State<Home> {
             children: [
               Text(
                 "Kurban Pilihan",
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),

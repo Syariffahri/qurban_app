@@ -92,7 +92,7 @@ class ListKurbanWidget extends StatelessWidget {
               ),
               Text(
                 price,
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: Theme.of(context).primaryColor,

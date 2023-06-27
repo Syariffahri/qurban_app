@@ -121,7 +121,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   widget.category,
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2!
+                      .bodyMedium!
                       .copyWith(fontSize: 10),
                 ),
               ),
@@ -147,12 +147,12 @@ class _DetailScreenState extends State<DetailScreen> {
             margin: const EdgeInsets.symmetric(vertical: 10),
             child: Text(
               widget.title,
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
           Text(
             "Bobot ${(widget.weight)}",
-            style: Theme.of(context).textTheme.subtitle1!.copyWith(
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: CustomColors.black,
                 ),
           ),
@@ -160,7 +160,7 @@ class _DetailScreenState extends State<DetailScreen> {
           Text(
             widget.desc,
             textAlign: TextAlign.justify,
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -199,12 +199,12 @@ class _DetailScreenState extends State<DetailScreen> {
                 children: [
                   Text(
                     "Harga/ekor",
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                   CustomSpace.spaceHeight,
                   Text(
                     widget.price,
-                    style: Theme.of(context).textTheme.headline1,
+                    style: Theme.of(context).textTheme.displayLarge,
                   ),
                 ],
               ),
@@ -219,7 +219,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
                 child: Text(
                   "Beli Sekarang",
-                  style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: Colors.white,
                       ),
                 ),
@@ -255,7 +255,7 @@ Widget _biaya(context, String biaya) {
         ),
         Text(
           "Biaya ${(biaya)}",
-          style: Theme.of(context).textTheme.subtitle1!.copyWith(
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontSize: 12,
                 color: CustomColors.black,
               ),

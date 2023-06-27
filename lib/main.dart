@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:speed_code01/global.dart';
-import 'package:speed_code01/screens/history.dart';
 import 'package:speed_code01/screens/home.dart';
-import 'package:speed_code01/screens/notification.dart';
-import 'package:speed_code01/screens/profile.dart';
+
+import 'screens/history.dart';
+import 'screens/notification.dart';
+import 'screens/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,22 +28,22 @@ class MyApp extends StatelessWidget {
         primaryColor: CustomColors.primaryColor,
         primarySwatch: Colors.blue,
         textTheme: TextTheme(
-          bodyText2: GoogleFonts.montserrat(
+          bodyMedium: GoogleFonts.montserrat(
             fontWeight: FontWeight.w600,
             fontSize: 14,
             color: CustomColors.black,
           ),
-          headline1: GoogleFonts.montserrat(
+          displayLarge: GoogleFonts.montserrat(
             fontWeight: FontWeight.w700,
             fontSize: 24,
             color: CustomColors.black,
           ),
-          subtitle1: GoogleFonts.montserrat(
+          titleMedium: GoogleFonts.montserrat(
             fontWeight: FontWeight.w500,
             fontSize: 13,
             color: CustomColors.black.withOpacity(0.6),
           ),
-          subtitle2: GoogleFonts.montserrat(
+          titleSmall: GoogleFonts.montserrat(
             fontSize: 12,
             fontWeight: FontWeight.w600,
           ),

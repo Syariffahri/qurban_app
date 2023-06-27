@@ -34,7 +34,7 @@ class ContainerRowWidget extends StatelessWidget {
                 children: [
                   Text(
                     "#menebarkebaikan",
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: Colors.white,
                           fontSize: 12,
                         ),
@@ -43,7 +43,7 @@ class ContainerRowWidget extends StatelessWidget {
                   Text(
                     title,
                     maxLines: 2,
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           fontWeight: FontWeight.w700,
                           color: Colors.white,
                         ),

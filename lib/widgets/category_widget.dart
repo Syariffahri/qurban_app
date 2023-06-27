@@ -36,14 +36,14 @@ class CategoryWidget extends StatelessWidget {
                 children: [
                   Text(
                     category,
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 2),
                   Text(
                     "Qurbanku",
-                    style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
                           color: CustomColors.black.withOpacity(0.6),
                         ),
                   ),

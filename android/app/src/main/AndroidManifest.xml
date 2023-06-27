@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.speed_code01">
    <application
-        android:label="speed_code01"
+        android:label="Qurban App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
